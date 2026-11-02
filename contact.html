@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan's Coffee Co. | Contact - 2 Locations</title>
+    <meta name="description" content="Logan's Coffee Co. Main: 123 Church Street Pretoria CBD. Second: 12 Cradock Avenue Rosebank JHB">
+    <link rel="canonical" href="https://tiani-22.github.io/Logan-Coffee-Co.-Part-3/contact.html">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header class="top-nav-light" style="display:flex; justify-content:space-between; padding:1rem; background:#FFF5F5;">
+        <div class="logo-green" style="font-weight:bold;">LOGAN'S <span>COFFEE CO.</span></div>
+        <nav>
+            <ul style="display:flex; gap:1rem; list-style:none;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html" class="active" style="color:#4A6B5A; font-weight:bold;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section style="background:#F9D6DC; padding:2rem; text-align:center;">
+            <h1>Contact Us - 2 Locations</h1>
+            <p>Main Shop + Second Branch</p>
+        </section>
+
+        <section style="display:flex; flex-wrap:wrap; gap:2rem; padding:2rem; max-width:1200px; margin:auto;">
+            
+            <!-- LEFT: 2 ADDRESSES -->
+            <div style="flex:1; min-width:300px;">
+                <h2 style="color:#4A6B5A; font-family:serif;">Logan's Coffee Co.</h2>
+                
+                <!-- ADDRESS 1 -->
+                <div style="background:#FFF0F3; border:1px solid #E8A0B0; border-left:6px solid #4A6B5A; padding:1rem; border-radius:12px; margin-bottom:1rem;">
+                    <h3 style="margin:0;">📍 Branch 1 - MAIN (Pretoria)</h3>
+                    <p style="margin:0.5rem 0 0 0;">123 Church Street<br>Pretoria CBD, 0002<br><b>012 345 6789</b></p>
+                </div>
+
+                <!-- ADDRESS 2 - SECOND ADDRESS -->
+                <div style="background:#E8F5E9; border:1px solid #4A6B5A; border-left:6px solid #E8A0B0; padding:1rem; border-radius:12px; margin-bottom:1rem;">
+                    <h3 style="margin:0;">📍 Branch 2 - SECOND ADDRESS (Rosebank)</h3>
+                    <p style="margin:0.5rem 0 0 0;">12 Cradock Avenue<br>Rosebank, Johannesburg, 2196<br><b>011 123 4567</b></p>
+                </div>
+
+                <div style="background:#fff; border:1px solid #eee; padding:1rem; border-radius:12px; margin-bottom:1rem;">
+                    <h3>📞 Phone</h3>
+                    <p>012 345 6789 (Pretoria)<br>011 123 4567 (Rosebank)</p>
+                    <h3>✉️ Email</h3>
+                    <p>hello@loganscoffee.co.za</p>
+                    <h3>🕒 Hours</h3>
+                    <p>Mon-Fri 7am-6pm, Sat-Sun 8am-4pm</p>
+                </div>
+            </div>
+
+            <!-- RIGHT: MAP WITH 2 PINS -->
+            <div style="flex:1; min-width:300px;">
+                <h3>Find Us</h3>
+                <div id="map" style="height:450px; width:100%; border-radius:16px; border:2px solid #F9D6DC;"></div>
+                <p style="font-size:0.85rem; opacity:0.7; margin-top:0.5rem;">Zoom out to see both pins: Pretoria Main + Rosebank</p>
+
+                <h3 style="margin-top:1.5rem;">Send Message</h3>
+                <form style="display:flex; flex-direction:column; gap:0.5rem;">
+                    <input type="text" placeholder="Full Name *" required minlength="3" style="padding:0.6rem; border-radius:8px; border:1px solid #ccc;">
+                    <input type="email" placeholder="Email *" required style="padding:0.6rem; border-radius:8px; border:1px solid #ccc;">
+                    <select required style="padding:0.6rem; border-radius:8px;">
+                        <option value="pretoria">Pretoria - 123 Church St</option>
+                        <option value="rosebank">Rosebank - 12 Cradock Ave</option>
+                    </select>
+                    <textarea placeholder="Message *" required minlength="10" rows="4" style="padding:0.6rem; border-radius:8px; border:1px solid #ccc;"></textarea>
+                    <button type="submit" style="background:#4A6B5A; color:white; padding:0.8rem; border:none; border-radius:20px; cursor:pointer;">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align:center; padding:1rem; background:#F9D6DC; margin-top:2rem;">
+        <p>Main: 123 Church St, Pretoria CBD, 0002 | Second: 12 Cradock Ave, Rosebank, JHB 2196</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const pretoria = [-25.7479, 28.1873];
+            const rosebank = [-26.1467, 28.0431];
+            const map = L.map('map').setView([-25.95, 28.12], 10);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'© OpenStreetMap'}).addTo(map);
+            L.marker(pretoria).addTo(map).bindPopup('<b>MAIN BRANCH</b><br>123 Church St<br>Pretoria CBD, 0002').openPopup();
+            L.marker(rosebank).addTo(map).bindPopup('<b>SECOND ADDRESS</b><br>12 Cradock Ave<br>Rosebank, 2196');
+            map.fitBounds([pretoria, rosebank], {padding:[40,40]});
+            setTimeout(()=>{ map.invalidateSize(); }, 500);
+        });
+    </script>
+</body>
+</html>
