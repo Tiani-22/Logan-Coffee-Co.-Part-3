@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan's Coffee Co. | Enquiry - Get Cost & Availability</title>
+    <meta name="description" content="Enquire about services, products, volunteer or sponsor at Logan's Coffee Co Pretoria - Get cost and availability">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="top-nav-light">
+        <div class="logo-green">LOGAN'S <span>COFFEE CO.</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">AboutUs</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html" class="active">Enquiry</a></li>
+            </ul>
+        </nav>
+        <a href="menu.html" class="btn-pink">Order Online</a>
+    </header>
+
+    <main>
+        <section class="menu-hero" style="background:#6B8E7D;">
+            <h1 style="color:white;">Send Us An Enquiry</h1>
+            <p style="color:white; opacity:0.9;">Services, Products, Volunteer & Sponsor - Get Cost & Availability Instantly</p>
+        </section>
+
+        <section class="contact-wrapper" style="grid-template-columns:1fr;">
+            <div class="enquiry-box">
+                <p style="margin-bottom:1.5rem; color:#4A6B5A;">Please fill out the form below to get in touch with us - Cost and availability will be shown after validation</p>
+                
+                <form id="enquiryForm" action="https://formspree.io/f/mqakwxyz" method="POST" class="contact-form">
+                    
+                    <label>Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="50" placeholder="Min 3 characters - e.g. Thandi Nkosi">
+                    
+                    <label>Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="Valid email required - e.g. hello@email.com">
+                    
+                    <label>Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10 digits - e.g. 0123456789">
+                    
+                    <label>Enquiry Type *</label>
+                    <select id="enquiryType" name="enquiryType" required>
+                        <option value="">-- Select --</option>
+                        <option value="service">Service (Catering, Workspace)</option>
+                        <option value="product">Product (Coffee Beans, Merch)</option>
+                        <option value="volunteer">Volunteer Barista Day</option>
+                        <option value="sponsor">Sponsor Community Brew</option>
+                    </select>
+                    
+                    <label>Item / Service Needed *</label>
+                    <select id="serviceNeeded" name="serviceNeeded" required>
+                        <option value="">-- Choose Item --</option>
+                        <option value="latte" data-cost="R45" data-avail="Available now in Pretoria">Signature Latte - R45</option>
+                        <option value="cappuccino" data-cost="R40" data-avail="Available now">Cappuccino - R40</option>
+                        <option value="beans" data-cost="R120" data-avail="In stock - 12 bags left">Coffee Beans 250g - R120</option>
+                        <option value="croissant" data-cost="R25" data-avail="Baked fresh daily - 8am">Croissant - R25</option>
+                        <option value="volunteer" data-cost="R0" data-avail="Next event: 15 Dec - 3 spots left">Volunteer Barista Day - Free</option>
+                        <option value="sponsor" data-cost="R250" data-avail="Available this month">Sponsor Community Brew - R250</option>
+                    </select>
+                    
+                    <label>Preferred Date *</label>
+                    <input type="date" id="date" name="date" required>
+                    
+                    <label>Message</label>
+                    <textarea id="message" name="message" minlength="10" maxlength="300" rows="4" placeholder="Min 10 characters - e.g. I would like to order..."></textarea>
+                    
+                    <button type="submit" class="btn-pink-large" style="width:100%; margin-top:1rem; border:none; cursor:pointer; background:#E8A0B0;">Get Cost & Availability</button>
+                </form>
+
+                <!-- Cost & Availability Response - Part 3 Section 4 -->
+                <div id="enquiryResponse" style="display:none; padding:1.5rem; background:#FFF9F7; border:2px solid #F9D6DC; border-radius:16px; margin-top:1.5rem;"></div>
+                <div id="contactResponse" style="display:none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-pink">
+        <p>&copy; 2026 Logan's Coffee Co. | 123 Church St, Pretoria | <a href="contact.html" style="color:#4A6B5A;">Contact Us</a></p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+    <script src="JS/lightbox.js"></script>
+</body>
+</html>
