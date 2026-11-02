@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan's Coffee Co. | Gallery - Cafe, Drinks & Pastries</title>
+    <meta name="description" content="Gallery of Logan's Coffee Co. Pretoria - view images of our cafe, freshly brewed drinks, and homemade pastries.">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="top-nav-light">
+        <div class="logo-green">LOGAN'S <span>COFFEE CO.</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">AboutUs</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </nav>
+        <a href="menu.html" class="btn-pink">Order Online</a>
+    </header>
+
+    <main>
+        <section class="menu-hero" style="background:#FFF9F7;">
+            <h1>Our Gallery</h1>
+            <p>Welcome to our gallery! Here you can view images of our café, drinks, and pastries.</p>
+            
+            <!-- FILTER BUTTONS - Interactive Elements Part 3 2.1 -->
+            <div class="filter-btns" style="margin-top:1.5rem;">
+                <button class="btn-pink" data-filter="all">All</button>
+                <button class="btn-white-large" data-filter="cafe" style="border:1px solid #E8A0B0; color:#4A6B5A;">Café</button>
+                <button class="btn-white-large" data-filter="drinks" style="border:1px solid #E8A0B0; color:#4A6B5A;">Drinks</button>
+                <button class="btn-white-large" data-filter="pastries" style="border:1px solid #E8A0B0; color:#4A6B5A;">Pastries</button>
+            </div>
+        </section>
+
+        <!-- GALLERY GRID - 3 Pics + All Your Images - With Lightbox + Lazy Loading + SEO Alt Text -->
+        <section class="gallery-wrapper">
+            <div class="gallery-grid">
+                
+                <!-- CAFE - Your 3 Pictures Representing Shop -->
+                <div class="gallery-item" data-category="cafe">
+                    <img src="_Images/Logan-s Coffee Co.png" alt="Logan's Coffee Co cafe interior Pretoria cozy workspace" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Our Shop - 123 Church St</div>
+                </div>
+                
+                <div class="gallery-item" data-category="cafe">
+                    <img src="_Images/Cappuccino.jpg" alt="Cozy interior of Logan's Coffee Co Pretoria with plants and wooden tables" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Cozy Workspace - Free WiFi</div>
+                </div>
+
+                <!-- DRINKS -->
+                <div class="gallery-item" data-category="drinks">
+                    <img src="_Images/Americano.jpg" alt="Americano coffee Logan's Coffee Co Pretoria strong bold" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Americano - R35</div>
+                </div>
+                
+                <div class="gallery-item" data-category="drinks">
+                    <img src="_Images/Latte.jpg" alt="Latte art at Logan's Coffee Co Pretoria smooth milky" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Latte - Smooth & Milky</div>
+                </div>
+
+                <div class="gallery-item" data-category="drinks">
+                    <img src="_Images/Flat-White.jpg" alt="Flat white Logan's Coffee Co Pretoria" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Flat White - R45</div>
+                </div>
+
+                <div class="gallery-item" data-category="drinks">
+                    <img src="_Images/Cold-brew.jpg" alt="Cold brew coffee Logan's Coffee Co refreshing Pretoria" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Cold Brew - Refreshing</div>
+                </div>
+
+                <div class="gallery-item" data-category="drinks">
+                    <img src="_Images/Matcha.jpg" alt="Matcha latte Logan's Coffee Co fruity sweet Pretoria" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Matcha - Fruity & Sweet</div>
+                </div>
+
+                <div class="gallery-item" data-category="drinks">
+                    <img src="_Images/Green-tea.jpg" alt="Green tea at Logan's Coffee Co" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Green Tea - Light</div>
+                </div>
+
+                <!-- PASTRIES -->
+                <div class="gallery-item" data-category="pastries">
+                    <img src="_Images/Croissants.jpg" alt="Fresh croissants Logan's Coffee Co Pretoria flaky buttery" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Croissants - Flaky & Buttery</div>
+                </div>
+
+                <div class="gallery-item" data-category="pastries">
+                    <img src="_Images/Chocolate-Muffin.jpg" alt="Chocolate muffin Logan's Coffee Co homemade" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Chocolate Muffin - R30</div>
+                </div>
+
+                <div class="gallery-item" data-category="pastries">
+                    <img src="_Images/Blueberry-Scone.jpg" alt="Blueberry scone Logan's Coffee Co fresh fruity" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Blueberry Scone - R28</div>
+                </div>
+
+                <div class="gallery-item" data-category="pastries">
+                    <img src="_Images/Strawberry-pie.jpg" alt="Strawberry pie Logan's Coffee Co sweet fruity" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Strawberry Pie - R35</div>
+                </div>
+
+                <!-- EXTRA IMAGES FROM YOUR _Images folder -->
+                <div class="gallery-item" data-category="pastries">
+                    <img src="_Images/Smoothies.jpg" alt="Smoothies at Logan's Coffee Co Pretoria" loading="lazy" width="400" height="300">
+                    <div class="gallery-caption">Smoothies - Fruity & Creamy</div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-pink">
+        <p>&copy; 2026 Logan's Coffee Co. | 123 Church St, Pretoria | <a href="contact.html" style="color:#4A6B5A;">Contact Us</a> | Images optimized with descriptive alt text for SEO</p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+    <script src="JS/lightbox.js"></script>
+    <script>
+        // GALLERY FILTER - Interactive Elements
+        document.addEventListener('DOMContentLoaded', function(){
+            const btns = document.querySelectorAll('.filter-btns button');
+            const items = document.querySelectorAll('.gallery-item');
+            btns.forEach(btn => {
+                btn.addEventListener('click', function(){
+                    const filter = this.dataset.filter;
+                    btns.forEach(b => { b.className='btn-white-large'; b.style.cssText='border:1px solid #E8A0B0; color:#4A6B5A;'; });
+                    this.className='btn-pink'; this.style.cssText='';
+                    
+                    items.forEach(item => {
+                        if(filter==='all' || item.dataset.category===filter){
+                            item.style.display='block';
+                            item.style.animation='fadeIn 0.5s';
+                        } else {
+                            item.style.display='none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
